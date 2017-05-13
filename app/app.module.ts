@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }   from './app.component';
 import { AuthorsComponent }   from './authors.component';
-import { CoursesComponent }   from './courses.component';
+import { CoursesComponent } from './courses.component';
+import { FavoriteComponent } from "./favorite.component";
 
 import { AuthorService } from "./author.service";
 import { CourseService } from "./course.service";
@@ -15,6 +16,7 @@ import { AutoGrowDirective } from "./auto-grow.directive";
   declarations: [ AppComponent, 
                   AuthorsComponent,
                   CoursesComponent,
+                  FavoriteComponent,
                   
                   AutoGrowDirective ], // directives and components
   bootstrap:    [ AppComponent ],
