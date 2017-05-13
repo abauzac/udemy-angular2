@@ -5,6 +5,8 @@ import { AppComponent }   from './app.component';
 import { AuthorsComponent }   from './authors.component';
 import { CoursesComponent } from './courses.component';
 import { FavoriteComponent } from "./favorite.component";
+import { LikeComponent } from "./like.component";
+import { VoteComponent } from "./vote.component";
 
 import { AuthorService } from "./author.service";
 import { CourseService } from "./course.service";
@@ -17,6 +19,8 @@ import { AutoGrowDirective } from "./auto-grow.directive";
                   AuthorsComponent,
                   CoursesComponent,
                   FavoriteComponent,
+                  LikeComponent,
+                  VoteComponent,
                   
                   AutoGrowDirective ], // directives and components
   bootstrap:    [ AppComponent ],
