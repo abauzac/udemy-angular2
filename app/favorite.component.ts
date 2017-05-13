@@ -1,25 +1,29 @@
-
-
-import { Component } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'favorite',
-    template: `
-    <div>
-        <i class="glyphicon" (click)="onClick()" 
-        [class.glyphicon-star]="isFavorite"
-        [class.glyphicon-star-empty]="!isFavorite" ></i>
-    </div>
-    `
+    templateUrl: "app/favorite.template.html",
+    styles: [`
+    
+    .glyphicon-star{
+        color:orange;
+    }
+    `]
 })
 
-export class FavoriteComponent  {
+export class FavoriteComponent {
+    @Input()
     isFavorite = false;
+
+    @Output()
+    change = new EventEmitter()
 
     constructor() { }
 
+
     onClick() {
         this.isFavorite = !this.isFavorite;
+        this.change.emit({ newvalue: this.isFavorite });
     }
 
 }
