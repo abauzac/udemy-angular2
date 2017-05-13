@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TweetService } from "./tweet.service";
 
 
 // control the entire page
@@ -18,9 +19,15 @@ import { Component } from '@angular/core';
   <like></like>
    <hr />
    <vote></vote>
+   <hr />
+   <h4>Challenge</h4>
+   <div *ngFor="let tt of tweets">
+    <tweet [tweet]="tt"></tweet>
+   </div>
   `,
 })
 export class AppComponent {
+  tweets = [];
 
   post = {
     title: "my title",
@@ -29,6 +36,10 @@ export class AppComponent {
 
   onFavoriteChange($event) {
     console.log($event);
+  }
+
+  constructor(tweetService: TweetService) {
+    this.tweets = tweetService.getTweets();
   }
 
  }

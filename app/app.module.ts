@@ -12,6 +12,8 @@ import { AuthorService } from "./author.service";
 import { CourseService } from "./course.service";
 
 import { AutoGrowDirective } from "./auto-grow.directive";
+import { TweetService } from "./tweet.service";
+import { TweetComponent } from "./tweet.component";
 
 @NgModule({
   imports:      [ BrowserModule ], // module dependency
@@ -21,10 +23,11 @@ import { AutoGrowDirective } from "./auto-grow.directive";
                   FavoriteComponent,
                   LikeComponent,
                   VoteComponent,
+                  TweetComponent,
                   
                   AutoGrowDirective ], // directives and components
   bootstrap:    [ AppComponent ],
-  providers:    [AuthorService, CourseService], // provider & dependency injection
+  providers: [AuthorService, CourseService, TweetService], // provider & dependency injection
   //exports : [] // export a specific component to be reusable
 })
 export class AppModule { }
