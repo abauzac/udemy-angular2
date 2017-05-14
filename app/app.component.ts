@@ -24,6 +24,10 @@ import { TweetService } from "./tweet.service";
    <div *ngFor="let tt of tweets">
     <tweet [tweet]="tt"></tweet>
    </div>
+
+    <hr />
+    <h3>Section 5</h3>
+    <post><post>
   `,
 })
 export class AppComponent {

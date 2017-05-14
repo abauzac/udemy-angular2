@@ -7,13 +7,16 @@ import { CoursesComponent } from './courses.component';
 import { FavoriteComponent } from "./favorite.component";
 import { LikeComponent } from "./like.component";
 import { VoteComponent } from "./vote.component";
+import { TweetComponent } from "./tweet.component";
+import { PostComponent } from "./post.component";
 
 import { AuthorService } from "./author.service";
 import { CourseService } from "./course.service";
+import { TweetService } from "./tweet.service";
+
+import { SummaryPipe } from "./summary.pipe";
 
 import { AutoGrowDirective } from "./auto-grow.directive";
-import { TweetService } from "./tweet.service";
-import { TweetComponent } from "./tweet.component";
 
 @NgModule({
   imports:      [ BrowserModule ], // module dependency
@@ -24,7 +27,10 @@ import { TweetComponent } from "./tweet.component";
                   LikeComponent,
                   VoteComponent,
                   TweetComponent,
+                  PostComponent,
                   
+                  SummaryPipe,
+
                   AutoGrowDirective ], // directives and components
   bootstrap:    [ AppComponent ],
   providers: [AuthorService, CourseService, TweetService], // provider & dependency injection
