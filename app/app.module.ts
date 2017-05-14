@@ -9,6 +9,7 @@ import { LikeComponent } from "./like.component";
 import { VoteComponent } from "./vote.component";
 import { TweetComponent } from "./tweet.component";
 import { PostComponent } from "./post.component";
+import { ZippyComponent } from "./zippy.component";
 
 import { AuthorService } from "./author.service";
 import { CourseService } from "./course.service";
@@ -17,6 +18,7 @@ import { TweetService } from "./tweet.service";
 import { SummaryPipe } from "./summary.pipe";
 
 import { AutoGrowDirective } from "./auto-grow.directive";
+import { ContactFormComponent } from "./contact-form.component";
 
 @NgModule({
   imports:      [ BrowserModule ], // module dependency
@@ -28,6 +30,8 @@ import { AutoGrowDirective } from "./auto-grow.directive";
                   VoteComponent,
                   TweetComponent,
                   PostComponent,
+                  ZippyComponent,
+                  ContactFormComponent,
                   
                   SummaryPipe,
 

@@ -1,0 +1,12 @@
+<div class="zip-wrapper">
+    <div class="zip-header" (click)="onClickExpand()">
+        <p class="zip-title">{{ title }}</p>
+        <i class="glyphicon zip-chevron pull-right" [ngClass]="{
+            'glyphicon-chevron-down' : !isExpanded, 
+            'glyphicon-chevron-up' : isExpanded}"></i>
+    </div>
+    <div class="zip-body" *ngIf="isExpanded">
+        <ng-content></ng-content>
+    </div>
+
+</div>
