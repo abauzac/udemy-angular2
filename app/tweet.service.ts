@@ -24,7 +24,7 @@ export class TweetService {
             authorName: "ux bootstrap",
             authorId: "3rdstudios",
             content: "10 reasons why fail",
-            countLikes: 0,
+            countLikes: 10,
             imageUrl: "http://lorempixel.com/100/100/people?" + Math.random()
         },]
     }

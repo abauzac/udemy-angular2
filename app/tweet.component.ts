@@ -10,14 +10,28 @@ import { Component, OnInit, Input } from '@angular/core';
             margin: 10px;
         }
 
+        .glyphicon-heart{
+            cursor:pointer;
+            color: gray;
+        }
+
+        .glyphicon-heart--liked{
+            color: deeppink;
+        }
     `]
 })
 
 export class TweetComponent implements OnInit {
     
     @Input() tweet: Tweet;
+    isLiked = false;
     
     constructor() { }
+
+    onLikeClick() {
+        this.isLiked = !this.isLiked;
+        this.isLiked ? this.tweet.countLikes++ : this.tweet.countLikes--;
+    }
 
     ngOnInit() { }
 }
